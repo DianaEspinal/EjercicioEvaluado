@@ -14,6 +14,8 @@ class Route {
     public static function dispatch ($uri, $method) {
         if (isset(self::$routes[$method][$uri])) {
             call_user_func(self::$routes[$method][$uri]);
+        } else {
+            echo "4040";
         }
     }
 }
